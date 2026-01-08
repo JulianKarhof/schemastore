@@ -57,19 +57,52 @@
       "description": "🐊Putout comes with a large number of rules. You can modify which rules your project uses.",
       "type": "object",
       "properties": {
-        "add-return-await": {
-          "$ref": "#/definitions/rule"
-        },
         "apply-at": {
           "$ref": "#/definitions/rule"
         },
-        "apply-await-import": {
+        "destructuring": {
           "$ref": "#/definitions/rule"
         },
-        "apply-destructuring": {
+        "destructuring/apply-array": {
           "$ref": "#/definitions/rule"
         },
-        "apply-early-return": {
+        "destructuring/apply-object": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/split-nested": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/merge-properties": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/extract-properties": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/extract-properties-equal-deep": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/extract-properties-not-equal-deep": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/remove-useless-object": {
+          "$ref": "#/definitions/rule"
+        },
+        "destructuring/remove-useless-arguments": {
+          "$ref": "#/definitions/rule"
+        },
+        "return": {
+          "$ref": "#/definitions/rule"
+        },
+        "return/apply-early": {
+          "$ref": "#/definitions/rule"
+        },
+        "return/simplify-boolean": {
+          "$ref": "#/definitions/rule"
+        },
+        "return/convert-from-break": {
+          "$ref": "#/definitions/rule"
+        },
+        "return/remove-useless": {
           "$ref": "#/definitions/rule"
         },
         "apply-montag": {
@@ -78,19 +111,49 @@
         "apply-nullish-coalescing": {
           "$ref": "#/definitions/rule"
         },
-        "apply-numeric-separators": {
+        "math": {
           "$ref": "#/definitions/rule"
         },
-        "apply-optional-chaining": {
+        "math/apply-numeric-separators": {
+          "$ref": "#/definitions/rule"
+        },
+        "math/apply-exponentiation": {
+          "$ref": "#/definitions/rule"
+        },
+        "math/apply-multiplication": {
+          "$ref": "#/definitions/rule"
+        },
+        "math/convert-sqrt-to-hypot": {
+          "$ref": "#/definitions/rule"
+        },
+        "math/declare": {
+          "$ref": "#/definitions/rule"
+        },
+        "math/remove-unchanged-zero-declarations": {
           "$ref": "#/definitions/rule"
         },
         "apply-shorthand-properties": {
           "$ref": "#/definitions/rule"
         },
-        "apply-try-catch": {
+        "try-catch": {
           "$ref": "#/definitions/rule"
         },
-        "apply-utility-types": {
+        "try-catch/await": {
+          "$ref": "#/definitions/rule"
+        },
+        "try-catch/async": {
+          "$ref": "#/definitions/rule"
+        },
+        "try-catch/sync": {
+          "$ref": "#/definitions/rule"
+        },
+        "try-catch/declare": {
+          "$ref": "#/definitions/rule"
+        },
+        "try-catch/args": {
+          "$ref": "#/definitions/rule"
+        },
+        "try-catch/expand-args": {
           "$ref": "#/definitions/rule"
         },
         "browserlist": {
@@ -117,7 +180,6 @@
         "conditions/evaluate": {
           "$ref": "#/definitions/rule"
         },
-
         "conditions/merge-if-statements": {
           "$ref": "#/definitions/rule"
         },
@@ -127,25 +189,16 @@
         "conditions/remove-constant": {
           "$ref": "#/definitions/rule"
         },
-        "conditions/remove-boolean": {
-          "$ref": "#/definitions/rule"
-        },
         "conditions/remove-useless-else": {
           "$ref": "#/definitions/rule"
         },
-        "convert-apply-to-spread": {
+        "label": {
           "$ref": "#/definitions/rule"
         },
-        "convert-arguments-to-rest": {
+        "label/convert-to-object": {
           "$ref": "#/definitions/rule"
         },
-        "convert-array-copy-to-slice": {
-          "$ref": "#/definitions/rule"
-        },
-        "convert-assignment-to-arrow-function": {
-          "$ref": "#/definitions/rule"
-        },
-        "convert-assignment-to-comparison": {
+        "label/remove-unused": {
           "$ref": "#/definitions/rule"
         },
         "convert-bitwise-to-logical": {
@@ -160,19 +213,13 @@
         "convert-is-nan-to-number-is-nan": {
           "$ref": "#/definitions/rule"
         },
-        "convert-math-pow": {
+        "math/apply-exponential": {
           "$ref": "#/definitions/rule"
         },
-        "convert-mock-require-to-mock-import": {
-          "$ref": "#/definitions/rule"
-        },
-        "convert-object-assign-to-merge-spread": {
+        "tape/convert-mock-require-to-mock-import": {
           "$ref": "#/definitions/rule"
         },
         "convert-quotes-to-backticks": {
-          "$ref": "#/definitions/rule"
-        },
-        "convert-spread-to-array-from": {
           "$ref": "#/definitions/rule"
         },
         "convert-template-to-string": {
@@ -188,9 +235,6 @@
           "$ref": "#/definitions/rule"
         },
         "eslint": {
-          "$ref": "#/definitions/rule"
-        },
-        "extract-object-properties": {
           "$ref": "#/definitions/rule"
         },
         "extract-sequence-expressions": {
@@ -232,10 +276,10 @@
         "maybe": {
           "$ref": "#/definitions/rule"
         },
-        "merge-destructuring-properties": {
+        "parens": {
           "$ref": "#/definitions/rule"
         },
-        "merge-duplicate-imports": {
+        "parens/add-missing": {
           "$ref": "#/definitions/rule"
         },
         "nodejs": {
@@ -295,6 +339,9 @@
         "promises/apply-top-level-await": {
           "$ref": "#/definitions/rule"
         },
+        "promises/apply-await-import": {
+          "$ref": "#/definitions/rule"
+        },
         "promises/convert-new-promise-to-async": {
           "$ref": "#/definitions/rule"
         },
@@ -314,9 +361,6 @@
           "$ref": "#/definitions/rule"
         },
         "putout/add-args": {
-          "$ref": "#/definitions/rule"
-        },
-        "putout/add-index-to-import": {
           "$ref": "#/definitions/rule"
         },
         "putout/add-push": {
@@ -448,7 +492,7 @@
         "regexp": {
           "$ref": "#/definitions/rule"
         },
-        "remove-boolean-from-assertions": {
+        "conditions/remove-boolean": {
           "$ref": "#/definitions/rule"
         },
         "remove-boolean-from-logical-expressions": {
@@ -484,13 +528,52 @@
         "remove-empty/block": {
           "$ref": "#/definitions/rule"
         },
-        "remove-empty/export": {
-          "$ref": "#/definitions/rule"
-        },
-        "remove-empty/import": {
-          "$ref": "#/definitions/rule"
-        },
         "remove-empty/pattern": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/add-index-to-import": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/remove-empty-import": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/remove-empty-export": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/convert-assert-to-with": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/group-imports-by-source": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/declare-imports-first": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/remove-quotes-from-import-assertions": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/merge-duplicate-imports": {
+          "$ref": "#/definitions/rule"
+        },
+        "esm/sort-imports-by-specifier": {
+          "$ref": "#/definitions/rule"
+        },
+        "optional-chaining": {
+          "$ref": "#/definitions/rule"
+        },
+        "optional-chaining/convert-optional-assign-to-logical": {
+          "$ref": "#/definitions/rule"
+        },
+        "optional-chaining/convert-optional-to-logical": {
+          "$ref": "#/definitions/rule"
+        },
+        "optional-chaining/convert-logical-assign-to-optional": {
+          "$ref": "#/definitions/rule"
+        },
+        "optional-chaining/convert-logical-to-optional": {
           "$ref": "#/definitions/rule"
         },
         "remove-iife": {
@@ -502,7 +585,37 @@
         "remove-unreachable-code": {
           "$ref": "#/definitions/rule"
         },
-        "remove-unreferenced-variables": {
+        "variables": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/convert-const-to-let": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-unused": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-useless": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-useless-assignment": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-useless-declarations": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-useless-duplicates": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-useless-rename": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/remove-unreferenced": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/extract-keyword": {
+          "$ref": "#/definitions/rule"
+        },
+        "variables/split-declarations": {
           "$ref": "#/definitions/rule"
         },
         "remove-unused-expressions": {
@@ -514,10 +627,22 @@
         "remove-unused-types": {
           "$ref": "#/definitions/rule"
         },
-        "remove-unused-variables": {
+        "arguments": {
           "$ref": "#/definitions/rule"
         },
-        "remove-useless-arguments": {
+        "arguments/apply-json-parse": {
+          "$ref": "#/definitions/rule"
+        },
+        "arguments/apply-rest": {
+          "$ref": "#/definitions/rule"
+        },
+        "arguments/remove-useless": {
+          "$ref": "#/definitions/rule"
+        },
+        "arguments/remove-useless-from-method": {
+          "$ref": "#/definitions/rule"
+        },
+        "arguments/remove-unused": {
           "$ref": "#/definitions/rule"
         },
         "remove-useless-array": {
@@ -550,10 +675,22 @@
         "remove-useless-operand": {
           "$ref": "#/definitions/rule"
         },
-        "remove-useless-return": {
+        "spread": {
           "$ref": "#/definitions/rule"
         },
-        "remove-useless-spread": {
+        "spread/convert-object-assign-to-merge-spread": {
+          "$ref": "#/definitions/rule"
+        },
+        "spread/simplify-nested": {
+          "$ref": "#/definitions/rule"
+        },
+        "spread/convert-apply-to-spread": {
+          "$ref": "#/definitions/rule"
+        },
+        "spread/remove-useless-array": {
+          "$ref": "#/definitions/rule"
+        },
+        "spread/remove-useless-object": {
           "$ref": "#/definitions/rule"
         },
         "remove-useless-template-expressions": {
@@ -568,25 +705,31 @@
         "remove-useless-types-from-constants": {
           "$ref": "#/definitions/rule"
         },
-        "remove-useless-variables": {
-          "$ref": "#/definitions/rule"
-        },
         "reuse-duplicate-init": {
           "$ref": "#/definitions/rule"
         },
-        "simplify-assignment": {
+        "assignment": {
+          "$ref": "#/definitions/rule"
+        },
+        "assignment/simplify": {
+          "$ref": "#/definitions/rule"
+        },
+        "assignment/split": {
+          "$ref": "#/definitions/rule"
+        },
+        "assignment/convert-to-arrow-function": {
+          "$ref": "#/definitions/rule"
+        },
+        "assignment/convert-to-comparison": {
+          "$ref": "#/definitions/rule"
+        },
+        "assignment/convert-to-declaration": {
           "$ref": "#/definitions/rule"
         },
         "simplify-logical-expressions": {
           "$ref": "#/definitions/rule"
         },
         "simplify-ternary": {
-          "$ref": "#/definitions/rule"
-        },
-        "split-nested-destructuring": {
-          "$ref": "#/definitions/rule"
-        },
-        "split-variable-declarations": {
           "$ref": "#/definitions/rule"
         },
         "tape": {

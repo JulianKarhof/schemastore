@@ -204,13 +204,7 @@
                 "pattern": "^\\d+s$"
               }
             },
-            "required": [
-              "command",
-              "entrypoint",
-              "image",
-              "kill_signal",
-              "kill_timeout"
-            ]
+            "required": ["command", "entrypoint", "kill_signal", "kill_timeout"]
           }
         },
         "tcp_checks": {
@@ -801,6 +795,20 @@
             },
             "links": {
               "key": "https://fly.io/docs/reference/configuration/#strategy"
+            }
+          }
+        },
+        "wait_timeout": {
+          "description": "Timeout for waiting for the Machine to be in a started state during a deploy.",
+          "type": "string",
+          "default": "5m",
+          "x-taplo": {
+            "docs": {
+              "main": "Timeout for waiting for the Machine to be in a started state during a deploy.",
+              "defaultValue": "Default is 5 minutes"
+            },
+            "links": {
+              "key": "https://fly.io/docs/reference/configuration/#dealing-with-timeout-errors-while-deploying-a-new-version"
             }
           }
         }

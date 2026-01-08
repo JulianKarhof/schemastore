@@ -895,11 +895,41 @@
       },
       "type": "object"
     },
+    "staticEncodedCharacters": {
+      "additionalProperties": false,
+      "properties": {
+        "allowEncodedSlash": {
+          "type": "boolean"
+        },
+        "allowEncodedBackSlash": {
+          "type": "boolean"
+        },
+        "allowEncodedNullCharacter": {
+          "type": "boolean"
+        },
+        "allowEncodedSemicolon": {
+          "type": "boolean"
+        },
+        "allowEncodedPercent": {
+          "type": "boolean"
+        },
+        "allowEncodedQuestionMark": {
+          "type": "boolean"
+        },
+        "allowEncodedHash": {
+          "type": "boolean"
+        }
+      },
+      "type": "object"
+    },
     "staticEntryPoint": {
       "additionalProperties": false,
       "properties": {
         "address": {
           "type": "string"
+        },
+        "allowACMEByPass": {
+          "type": "boolean"
         },
         "forwardedHeaders": {
           "$ref": "#/$defs/staticForwardedHeaders"
@@ -970,6 +1000,12 @@
     "staticForwardedHeaders": {
       "additionalProperties": false,
       "properties": {
+        "connection": {
+          "items": {
+            "type": "string"
+          },
+          "type": ["array", "null"]
+        },
         "insecure": {
           "type": "boolean"
         },
@@ -1030,6 +1066,9 @@
     "staticHTTPConfig": {
       "additionalProperties": false,
       "properties": {
+        "encodedCharacters": {
+          "$ref": "#/$defs/staticEncodedCharacters"
+        },
         "encodeQuerySemicolons": {
           "type": "boolean"
         },
